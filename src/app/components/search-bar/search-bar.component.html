@@ -1,0 +1,8 @@
+
+<div>
+  <form class="form" (ngSubmit) ="findMovies()">
+    <input type='text' name='searchString' [(ngModel)]="searchString" minLength=3 required placeholder="Search Movie Here..." />
+    <input type="submit" value="Submit" (click)="findMovies()" class="btn" />
+    <span *ngIf="invalidInput">Please Enter Valid Input</span>
+  </form>
+</div>

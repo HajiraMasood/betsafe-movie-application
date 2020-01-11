@@ -1,0 +1,8 @@
+<div>
+  <div *ngIf="movies">
+    <app-movie-card *ngFor = "let movie of movies" [movie]= "movie"></app-movie-card>
+  </div>
+  <div *ngIf="!movies">
+    Loading...
+  </div>
+</div>

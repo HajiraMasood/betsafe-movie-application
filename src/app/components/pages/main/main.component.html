@@ -1,0 +1,7 @@
+<div>
+  <form class="form" (ngSubmit) ="navigateToMovies()">
+    <input type='text' name='searchString' [(ngModel)]="searchString"  placeholder="Search Movie Here..." />
+    <input type="submit" value="Submit" (click)="navigateToMovies()" class="btn" />
+    <span *ngIf="invalidInput">Please Enter Valid Input</span>
+  </form>
+</div>
