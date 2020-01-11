@@ -17,7 +17,7 @@ export class MainComponent implements OnInit {
   navigateToMovies() {
     if (this.searchString && this.searchString.length >= 3) {
       this.invalidInput = false;
-      this.router.navigate(['movies', this.searchString]);
+      this.router.navigate(['movies', encodeURIComponent(this.searchString)]);
     } else {
       this.invalidInput = true;
     }

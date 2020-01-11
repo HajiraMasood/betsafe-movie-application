@@ -21,7 +21,7 @@ export class MoviesListComponent implements OnInit {
   ngOnInit() {
     this.route.paramMap.pipe(
       switchMap((params: ParamMap) => {
-        this.searchString = params.get('searchString');
+        this.searchString = decodeURIComponent(params.get('searchString'));
         return this.movieService.getMovies(params.get('searchString'));
       })
     ).subscribe(res => {
