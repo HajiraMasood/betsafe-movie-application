@@ -1,6 +1,12 @@
-<div>
-  <app-header [searchString]="searchString" ></app-header>
-  <div *ngIf="noMovies">Movie not found!
+<div class="container-lg">
+  <div class="card">
+    <div class="card-header">
+      <app-header [searchString]="searchString" ></app-header>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title" *ngIf="noMovies">Movie not found!
+      </h5>
+      <app-movies [movies]= "movies"></app-movies>
+    </div>
   </div>
-  <app-movies [movies]= "movies"></app-movies>
 </div>

@@ -1,5 +1,18 @@
-<a [routerLink]="['/movie', movie.imdbID]">
-  <p>
-    {{ movie.Title }}
-  </p>
+<a [routerLink]="['/movie', movie.imdbID]" class="card mb-3">
+  <div class="row no-gutters">
+    <div >
+      <img src={{movie.Poster}} class="card-img image-size" alt="...">
+    </div>
+    <div >
+      <div class="card-body">
+        <p class="card-title">{{movie.Title}}</p>
+        <p class="card-text">
+          <i *ngIf="isSeries" class="fa fa-tv"></i>
+          <i *ngIf="isMovie" class="fa fa-film"></i>
+          &nbsp;
+          <small class="text-muted">{{movie.Year}}</small>
+        </p>
+      </div>
+    </div>
+  </div>
 </a>

@@ -1,9 +1,15 @@
-<div>
-  <app-header [searchString]="searchString" ></app-header>
-  <div *ngIf="movie">
-    <app-movie-detail [movie]="movie"></app-movie-detail>
-  </div>
-  <div *ngIf="!movie">
-    Loading...
+<div class="container-lg">
+  <div class="card">
+    <div class="card-header">
+      <app-header [searchString]="searchString" ></app-header>
+    </div>
+    <div class="card-body">
+      <div *ngIf="movie">
+        <app-movie-detail [movie]="movie"></app-movie-detail>
+      </div>
+      <h5 class="card-title" *ngIf="!movie">
+        Loading...
+      </h5>
+    </div>
   </div>
 </div>
