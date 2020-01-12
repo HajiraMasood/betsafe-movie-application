@@ -14,6 +14,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { MainComponent } from './components/pages/main/main.component';
 import { MovieComponent } from './components/pages/movie/movie.component';
 import { MoviesListComponent } from './components/pages/movies-list/movies-list.component';
+import { PaginationComponent } from './components/pagination/pagination.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { MoviesListComponent } from './components/pages/movies-list/movies-list.
     HeaderComponent,
     MainComponent,
     MovieComponent,
-    MoviesListComponent
+    MoviesListComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,
