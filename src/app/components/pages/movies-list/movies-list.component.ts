@@ -13,7 +13,8 @@ export class MoviesListComponent implements OnInit {
 
   movies: Movie[];
   searchString: string;
-  noMovies = false;
+  totalResults: string;
+  page = 1;
 
   constructor(private movieService: MovieService,
               private route: ActivatedRoute ) { }
@@ -21,18 +22,49 @@ export class MoviesListComponent implements OnInit {
   ngOnInit() {
     this.route.paramMap.pipe(
       switchMap((params: ParamMap) => {
+        if (this.searchString !== params.get('searchString')) {
+          this.clearSearched();
+        }
         this.searchString = decodeURIComponent(params.get('searchString'));
-        return this.movieService.getMovies(params.get('searchString'));
+        return this.movieService.getMovies(params.get('searchString'), 0);
       })
     ).subscribe(res => {
       if (res.Error === 'Movie not found!') {
-        this.noMovies = true;
-        this.movies = [];
+        this.clearSearched();
       } else {
-        this.noMovies = false;
         this.movies = res.Search;
+        this.totalResults = res.totalResults;
       }
     });
+  }
+
+  clearSearched() {
+    this.totalResults = '0';
+    this.page = 1;
+    this.movies = [];
+  }
+
+  getNextPage() {
+    if ((this.page * 10) >= (parseInt(this.totalResults, 10) / 10)) {
+      return;
+    }
+    this.page = this.page + 1;
+    this.getPageMovies(this.page);
+  }
+
+  getPageMovies(page: number) {
+    this.movieService.getMovies(this.searchString, page).subscribe(res => {
+      this.movies = res.Search;
+    });
+  }
+
+  getPreviousPage() {
+    this.page = this.page - 1 ;
+    if (this.page === 0) {
+      this.page = 1;
+      return;
+    }
+    this.getPageMovies(this.page);
   }
 
 }

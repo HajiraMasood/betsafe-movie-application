@@ -4,8 +4,14 @@
       <app-header [searchString]="searchString" ></app-header>
     </div>
     <div class="card-body">
-      <h5 class="card-title" *ngIf="noMovies">Movie not found!
+      <h5 class="card-title"> Displaying 10 of {{totalResults}}  results for "{{searchString}}"
       </h5>
+      <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item"><p class="page-link" (click)="getPreviousPage()">Previous</p></li>
+          <li class="page-item"><p class="page-link"  (click)="getNextPage()">Next</p></li>
+        </ul>
+      </nav>
       <app-movies [movies]= "movies"></app-movies>
     </div>
   </div>

@@ -8,18 +8,10 @@ import { Movie } from '../../models/Movie';
 })
 export class MovieDetailComponent implements OnInit {
   @Input() movie: Movie;
-  isMovie: boolean;
-  isSeries: boolean;
 
   constructor() { }
 
   ngOnInit() {
-    if (this.movie.Type === 'series') {
-      this.isSeries = true;
-    } else if ( this.movie.Type === 'movie') {
-      this.isMovie = true;
-
-    }
   }
 
 }
