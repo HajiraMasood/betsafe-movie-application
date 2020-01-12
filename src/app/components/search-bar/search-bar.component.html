@@ -1,8 +1,12 @@
-
-<div>
-  <form class="form" (ngSubmit) ="findMovies()">
-    <input type='text' name='searchString' [(ngModel)]="searchString" minLength=3 required placeholder="Search Movie Here..." />
-    <input type="submit" value="Submit" (click)="findMovies()" class="btn" />
-    <span *ngIf="invalidInput">Please Enter Valid Input</span>
-  </form>
-</div>
+<form class="" (ngSubmit) ="findMovies()">
+  <div class="input-group">
+    <input type='text' class="form-control" name='searchString'
+     [(ngModel)]="searchString"  placeholder="Search Movie Here..." />
+    <div class="input-group-append">
+      <button type="submit" class="btn btn-secondary" (click)="findMovies()">
+        <i class="fa fa-search"></i>
+      </button>
+    </div>
+  </div>
+  <span *ngIf="invalidInput">Please Enter Valid Input</span>
+</form>

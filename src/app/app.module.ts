@@ -31,7 +31,7 @@ import { MoviesListComponent } from './components/pages/movies-list/movies-list.
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

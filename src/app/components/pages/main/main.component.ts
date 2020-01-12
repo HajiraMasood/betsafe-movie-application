@@ -7,6 +7,7 @@ import { Router } from '@angular/router' ;
   styleUrls: ['./main.component.sass']
 })
 export class MainComponent implements OnInit {
+
   searchString = '';
   invalidInput = false;
   constructor( private router: Router ) { }

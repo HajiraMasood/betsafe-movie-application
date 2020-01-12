@@ -1,7 +1,17 @@
-<div>
-  <form class="form" (ngSubmit) ="navigateToMovies()">
-    <input type='text' name='searchString' [(ngModel)]="searchString"  placeholder="Search Movie Here..." />
-    <input type="submit" value="Submit" (click)="navigateToMovies()" class="btn" />
-    <span *ngIf="invalidInput">Please Enter Valid Input</span>
-  </form>
+<div class="container main-container">
+  <div class="centerScreenDiv">
+    <h1 class="text-center name-container">Movie Application</h1>
+    <form class="form-container" (ngSubmit) ="navigateToMovies()">
+      <div class="input-group">
+        <input type='text' class="form-control" name='searchString' minLength=3
+         [(ngModel)]="searchString"  placeholder="Search Movie Here..." />
+        <div class="input-group-append">
+          <button type="submit" class="btn btn-secondary" (click)="navigateToMovies()">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+      </div>
+      <span *ngIf="invalidInput">Please Enter Valid Input</span>
+    </form>
+  </div>
 </div>
