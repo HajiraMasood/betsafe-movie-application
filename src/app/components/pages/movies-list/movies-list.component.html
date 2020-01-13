@@ -4,8 +4,8 @@
       <app-header [searchString]="searchString" ></app-header>
     </div>
     <div class="card-body">
-      <h5 *ngIf="!movies">No Results Found</h5>
-      <div *ngIf="movies">
+      <h5 *ngIf="movieError">Movie not found!</h5>
+      <div *ngIf="movies && !movieError">
         <h5 class="card-title"> Displaying {{page}} of {{ pages }}  page/s for "{{searchString}}"
         </h5>
         <app-pagination [pages]="pages" [page]="page"></app-pagination>
