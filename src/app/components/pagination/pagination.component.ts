@@ -10,6 +10,7 @@ import { MovieService } from 'src/app/services/movie.service';
 export class PaginationComponent implements OnInit {
   @Input() page: number ;
   @Input() pages: number;
+  items: number[] = [];
 
   constructor(private movieService: MovieService) {
     movieService.resetPage$.subscribe(
@@ -19,29 +20,17 @@ export class PaginationComponent implements OnInit {
   }
 
   ngOnInit() {
+    for (let i = 1; i <= this.pages; i++) {
+      this.items.push(i);
+    }
   }
 
-  pageUpdate(direction: boolean) {
-    if (direction === true) {
-      this.getNextPage();
-    } else {
-      this.getPreviousPage();
-    }
+  pageUpdate(page: number) {
+    this.page = page;
     this.movieService.updatePageMovies(this.page);
   }
 
-  getNextPage() {
-    if ((this.page) >= this.pages) {
-      return;
-    }
-    this.page = this.page + 1;
-  }
+  createRange() {
 
-  getPreviousPage() {
-    this.page = this.page - 1 ;
-    if (this.page === 0) {
-      this.page = 1;
-      return;
-    }
   }
 }

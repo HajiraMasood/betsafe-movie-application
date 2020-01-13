@@ -4,9 +4,10 @@
       <app-header [searchString]="searchString" ></app-header>
     </div>
     <div class="card-body">
-      <div *ngIf="movies.length===0 && !movieError" class="progress-bar" role="progressbar"
-      style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Loading
+      <div *ngIf="movies.length===0 && !movieError" class="progress-bar bg-info" role="progressbar"
+      style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Loading
       </div>
+
       <h5 *ngIf="movieError">Movie not found!</h5>
       <div *ngIf="movies.length >= 1 && !movieError">
         <h5 class="card-title"> Displaying {{page}} of {{ pages }}  page/s for "{{searchString}}"
