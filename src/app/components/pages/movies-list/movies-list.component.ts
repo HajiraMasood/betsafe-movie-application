@@ -20,9 +20,9 @@ export class MoviesListComponent implements OnInit {
   movieError: boolean;
   totalResults: string;
 
-  constructor(private movieService: MovieService,
-              private route: ActivatedRoute) {
-      this.subscription = movieService.nextOrPreviousButtonSet$.subscribe(
+  constructor(private movieService: MovieService, private route: ActivatedRoute) {
+    this.movies = [];
+    this.subscription = movieService.nextOrPreviousButtonSet$.subscribe(
         page => {
           this.page = page;
           this.getMovies(this.searchString, page);
