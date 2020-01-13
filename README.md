@@ -11,9 +11,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 	- Selected movie detail information - Title, Year, Type, Poster, Plot, IMDB rating, Runtime, Genre is shown
 	- Navigating back to movie list. Previous search & results are visible
 
+Test:
+  - There is test in every component and one custom test is added in movie-list component.
+
 Pages have proper urls and navigation works as expected:
 	- using the back and forward button of the browser takes to the correct page
 	- reloading the current page works as expected
+
 
 ## Technologies Used
 
@@ -35,6 +39,5 @@ Pages have proper urls and navigation works as expected:
   - Run `ng serve --open` to run server, will open browser with `http://localhost:4200/` URl.
 
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).).
+## Unit tests 
+  - Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).).
