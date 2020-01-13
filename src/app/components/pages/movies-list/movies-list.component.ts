@@ -18,6 +18,7 @@ export class MoviesListComponent implements OnInit {
   page = 1;
   subscription: Subscription;
   movieError: boolean;
+  totalResults: string;
 
   constructor(private movieService: MovieService,
               private route: ActivatedRoute) {
@@ -54,6 +55,7 @@ export class MoviesListComponent implements OnInit {
       } else {
         this.movieError = false;
         this.movies = res.Search;
+        this.totalResults = res.totalResults;
         this.pages = Math.ceil(Number(res.totalResults) / 100);
       }
     });

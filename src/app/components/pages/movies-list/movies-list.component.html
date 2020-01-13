@@ -10,9 +10,8 @@
 
       <h5 *ngIf="movieError">Movie not found!</h5>
       <div *ngIf="movies.length >= 1 && !movieError">
-        <h5 class="card-title"> Displaying {{page}} of {{ pages }}  page/s for "{{searchString}}"
+        <h5 class="card-title"> About {{totalResults}} results
         </h5>
-        <app-pagination [pages]="pages" [page]="page"></app-pagination>
         <app-movies [movies]= "movies"></app-movies>
         <app-pagination [pages]="pages" [page]="page"></app-pagination>
       </div>

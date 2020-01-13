@@ -4,10 +4,8 @@
     <li class="page-item" [ngClass]="{disabled:page === 1}">
         <button class="page-link"  role="button" (click)="pageUpdate(page - 1)">Previous</button>
     </li>
-    <li class="page-item"
-      *ngFor="let item of items"
-      [ngClass]="{active:page === item}">
-        <button class="page-link" role="button"(click)="pageUpdate(item)">{{item}}</button>
+    <li class="page-item">
+        <button class="page-link">{{ page }}</button>
     </li>
     <li class="page-item" [ngClass]="{disabled:page === pages}">
         <button class="page-link" (click)="pageUpdate(page + 1)">Next</button>

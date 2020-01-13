@@ -10,7 +10,6 @@ import { MovieService } from 'src/app/services/movie.service';
 export class PaginationComponent implements OnInit {
   @Input() page: number ;
   @Input() pages: number;
-  items: number[] = [];
 
   constructor(private movieService: MovieService) {
     movieService.resetPage$.subscribe(
@@ -20,9 +19,6 @@ export class PaginationComponent implements OnInit {
   }
 
   ngOnInit() {
-    for (let i = 1; i <= this.pages; i++) {
-      this.items.push(i);
-    }
   }
 
   pageUpdate(page: number) {
