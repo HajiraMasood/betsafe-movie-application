@@ -24,16 +24,15 @@ export class MovieService {
   constructor(private http: HttpClient ) { }
 
   getMovies(searchString: string, page: number) {
-    if (page === 0) {
-      return this.http.get<OmdbSearchResponse>(`${this.movieUrl}${this.movieSearchLitral}${searchString}`);
-    } else {
-      return this.http.get<OmdbSearchResponse>(`${this.movieUrl}${this.movieSearchLitral}${searchString}${this.paging}${page}`);
-
+    let baseUrl = `${this.movieUrl}${this.movieSearchLitral}${searchString}`;
+    if (page !== 0) {
+      baseUrl = baseUrl + this.paging + page;
     }
+    return this.http.get<OmdbSearchResponse>(baseUrl);
   }
 
   getMovieDetail(imdbID: string) {
-      return this.http.get<Movie>(`${this.movieUrl}${this.movieDetailLitral}${imdbID}`);
+      return this.http.get<Movie>(`; $; {this.movieUrl; }$; {this.movieDetailLitral; }$; {imdbID; }`);
   }
 
   updatePageMovies(page: number) {

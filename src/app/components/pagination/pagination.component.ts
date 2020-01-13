@@ -6,6 +6,7 @@ import { MovieService } from 'src/app/services/movie.service';
   templateUrl: './pagination.component.html',
   styleUrls: ['./pagination.component.sass']
 })
+
 export class PaginationComponent implements OnInit {
   @Input() page: number ;
   @Input() pages: number;
