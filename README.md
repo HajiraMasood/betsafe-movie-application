@@ -28,7 +28,9 @@ Pages have proper urls and navigation works as expected:
   - [Bootstrap](https://getbootstrap.com/)
   - [Bootswatch](https://bootswatch.com/) for Used Sandstone as template for UI.
   - [Fontawesome](https://www.npmjs.com/package/font-awesome) for movie and search icons
-	- State management is applied using the recommended method by : https://angular.io/guide/component-interaction#parent-and-children-communicate-via-a-service
+  - [Karma](https://karma-runner.github.io).)
+	- State management is applied using the recommended method by : https://angular.io/guide/
+  component-interaction#parent-and-children-communicate-via-a-service
 
 ## Content
 	- Content is fetched from - http://www.omdbapi.com/ Using `f79aeba3` API key 
