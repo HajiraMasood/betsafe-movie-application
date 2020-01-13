@@ -18,6 +18,7 @@ export class MoviesListComponent implements OnInit {
   page = 1;
   subscription: Subscription;
   math = Math;
+  movieError: boolean;
 
   constructor(private movieService: MovieService,
               private route: ActivatedRoute) {
@@ -26,10 +27,6 @@ export class MoviesListComponent implements OnInit {
           this.page = page;
           this.getPageMovies(page);
       });
-  }
-
-  ngOnDestroy() {
-    this.subscription.unsubscribe();
   }
 
   ngOnInit() {
@@ -43,8 +40,9 @@ export class MoviesListComponent implements OnInit {
       })
     ).subscribe(res => {
       if (res.Error === 'Movie not found!') {
-        this.clearSearched();
+        this.movieError = true;
       } else {
+        this.movieError = false;
         this.movies = res.Search;
         this.pages = Math.ceil(Number(res.totalResults) / 100);
       }
