@@ -36,9 +36,9 @@ Pages have proper urls and navigation works as expected:
 
 ## Deploying
   - Clone directory and run `npm install` by getting into the project directory 
-  - Run `ng build` to build the project.
+  - Run `npm build` to build the project.
   - Run `ng serve --open` to run server, will open browser with `http://localhost:4200/` URl.
 
 
 ## Unit tests 
-  - Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+  - Run `npm run test` to execute the unit tests via [Karma](https://karma-runner.github.io).
