@@ -28,10 +28,6 @@ export class MoviesListComponent implements OnInit {
       });
   }
 
-  ngOnDestroy() {
-    this.subscription.unsubscribe();
-  }
-
   ngOnInit() {
     this.route.paramMap.pipe(
       switchMap((params: ParamMap) => {
