@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.22 as a test project for Betsafe.
 
-## Application contains the below features:
+## Application contains the following features:
 
 - Movies Search
 	- List movies coming from search result - Title, Year, Type, Poster
@@ -21,19 +21,18 @@ Pages have proper urls and navigation works as expected:
 
 ## Technologies Used
 
-	- [Angular](https://angular.io/)
-	- [TypeScript](https://www.typescriptlang.org/)
-	- [Rxjs](https://github.com/ReactiveX/rxjs)
-	- [Sass](http://sass-lang.com/)
+  - [Angular](https://angular.io/)
+  - [TypeScript](https://www.typescriptlang.org/)
+  - [Rxjs](https://github.com/ReactiveX/rxjs)
+  - [Sass](http://sass-lang.com/)
   - [Bootstrap](https://getbootstrap.com/)
   - [Bootswatch](https://bootswatch.com/) for Used Sandstone as template for UI.
   - [Fontawesome](https://www.npmjs.com/package/font-awesome) for movie and search icons
-  - [Karma](https://karma-runner.github.io).)
-	- State management is applied using the recommended method by : https://angular.io/guide/
-  component-interaction#parent-and-children-communicate-via-a-service
+  - [Karma](https://karma-runner.github.io)
+  - State management is applied using the recommended method by : https://angular.io/guide/component-interaction#parent-and-children-communicate-via-a-service
 
 ## Content
-	- Content is fetched from - http://www.omdbapi.com/ Using `f79aeba3` API key 
+  - Content is fetched from - http://www.omdbapi.com/ Using `f79aeba3` API key 
 
 ## Deploying
   - Clone directory and run `npm install` by getting into the project directory 
@@ -42,4 +41,4 @@ Pages have proper urls and navigation works as expected:
 
 
 ## Unit tests 
-  - Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).).
+  - Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
