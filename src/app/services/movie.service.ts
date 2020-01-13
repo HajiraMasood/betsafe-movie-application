@@ -32,7 +32,7 @@ export class MovieService {
   }
 
   getMovieDetail(imdbID: string) {
-      return this.http.get<Movie>(`; $; {this.movieUrl; }$; {this.movieDetailLitral; }$; {imdbID; }`);
+      return this.http.get<Movie>(`${this.movieUrl}${this.movieDetailLitral}${imdbID}`);
   }
 
   updatePageMovies(page: number) {
