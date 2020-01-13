@@ -11,9 +11,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 	- Selected movie detail information - Title, Year, Type, Poster, Plot, IMDB rating, Runtime, Genre is shown
 	- Navigating back to movie list. Previous search & results are visible
 
+Test:
+  - There is test in every component and one custom test is added in movie-list component.
+
 Pages have proper urls and navigation works as expected:
 	- using the back and forward button of the browser takes to the correct page
 	- reloading the current page works as expected
+
 
 ## Technologies Used
 
@@ -24,7 +28,9 @@ Pages have proper urls and navigation works as expected:
   - [Bootstrap](https://getbootstrap.com/)
   - [Bootswatch](https://bootswatch.com/) for Used Sandstone as template for UI.
   - [Fontawesome](https://www.npmjs.com/package/font-awesome) for movie and search icons
-	- State management is applied using the recommended method by : https://angular.io/guide/component-interaction#parent-and-children-communicate-via-a-service
+  - [Karma](https://karma-runner.github.io).)
+	- State management is applied using the recommended method by : https://angular.io/guide/
+  component-interaction#parent-and-children-communicate-via-a-service
 
 ## Content
 	- Content is fetched from - http://www.omdbapi.com/ Using `f79aeba3` API key 
@@ -35,6 +41,5 @@ Pages have proper urls and navigation works as expected:
   - Run `ng serve --open` to run server, will open browser with `http://localhost:4200/` URl.
 
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).).
+## Unit tests 
+  - Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).).
