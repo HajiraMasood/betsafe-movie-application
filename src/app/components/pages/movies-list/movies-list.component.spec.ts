@@ -1,9 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MoviesListComponent } from './movies-list.component';
-import { Movie } from 'src/app/models/Movie';
 import { MovieService } from 'src/app/services/movie.service';
-import { HttpClient } from '@angular/common/http';
 import { of, Subject, Observable } from 'rxjs';
 import { OmdbSearchResponse } from 'src/app/models/OmdbSearchResponse';
 import { MoviesComponent } from '../../movies/movies.component';
@@ -15,7 +13,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, convertToParamMap, ParamMap } from '@angular/router';
 
-fdescribe('MoviesListComponent', () => {
+describe('MoviesListComponent', () => {
   let component: MoviesListComponent;
   let fixture: ComponentFixture<MoviesListComponent>;
   let mockMovieService;
@@ -42,7 +40,6 @@ fdescribe('MoviesListComponent', () => {
           provide: ActivatedRoute,
           useValue: {
             paramMap: routeSubject.asObservable(),
-            //  of(convertToParamMap({ searchString: 'mov' }))
           }
         },
         {
